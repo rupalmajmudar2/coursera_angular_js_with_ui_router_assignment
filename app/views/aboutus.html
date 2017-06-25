@@ -55,7 +55,22 @@
             <div class="col-xs-12 col-sm-9">
                 <h2>Corporate Leadership</h2>
                <ul class="media-list">
-					<h4>Implement the Corporate Leaders List here</h4>
+						<li class="media"
+							ng-repeat="nextleader in leadership">
+				 			<div class="media-left media-middle">
+                        		<a ui-sref="app.aboutus({id:0})">
+                        			<img class="media-object img-thumbnail"
+                        			ng-src={{nextleader.image}} alt="Leader">
+                        		</a>
+							</div>
+					 		<div class="media-body">
+								<h2 class="media-heading">
+									{{nextleader.name}} <span class="label label-danger">{{nextleader.designation}}</span>
+									<span class="badge">{{nextleader.abbr}}</span>
+								</h2>
+								<p>{{nextleader.description}}</p>
+							</div> 
+						</li>
                </ul>
 
             </div>
