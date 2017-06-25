@@ -6,7 +6,23 @@
                 <h3 align=center>Our Lipsmacking Culinary Creations</h3>
             </div>
             <div class="col-xs-12 col-sm-9 col-sm-pull-3">
-				<h4>Implement the Featured Dish Here</h4>
+				 <ul class="media-list">
+						<li class="media">
+				 			<div class="media-left media-middle">
+                        		<a ui-sref="app({id:0})">
+                        			<img class="media-object img-thumbnail"
+                        			ng-src={{featuredDish.image}} alt="Featured Dish">
+                        		</a>
+							</div>
+							<div class="media-body">
+								<h2 class="media-heading">
+									{{featuredDish.name}} <span class="label label-danger">{{featuredDish.label}}</span>
+									<span class="badge">{{featuredDish.price | currency}}</span>
+								</h2>
+								<p>{{featuredDish.description}}</p>
+							</div>
+						</li>
+               </ul>
             </div>
         </div>
 
@@ -17,7 +33,24 @@
                 <h3 align=center>This Month's Promotions</h3>
             </div>
             <div class="col-xs-12 col-sm-9">
-				<h4>Implement the Promotion Here</h4>
+               <ul class="media-list fade in active">
+						<li class="media"
+							ng-repeat="promo in allpromos">
+				 			<div class="media-left media-middle">
+                        		<a ui-sref="app({id:0})">
+                        			<img class="media-object img-thumbnail"
+                        			ng-src={{promo.image}} alt="Promotion">
+                        		</a>
+							</div>
+					 		<div class="media-body">
+								<h2 class="media-heading">
+									{{promo.name}} <span class="label label-danger">{{promo.label}}</span>
+									<span class="badge">{{promo.price | currency}}</span>
+								</h2>
+								<p>{{promo.description}}</p>
+							</div> 
+						</li>
+               </ul>
             </div>
         </div>
 
@@ -27,7 +60,23 @@
                 <h3 align=center>Meet our Culinary Specialists</h3>
             </div>
             <div class="col-xs-12 col-sm-9 col-sm-pull-3">
-				<h4>Implement the Executive Chef Info Here</h4>
+				 <ul class="media-list">
+						<li class="media">
+				 			<div class="media-left media-middle">
+                        		<a ui-sref="app({id: execChef.abbr})">
+                        			<img class="media-object img-thumbnail"
+                        			ng-src={{execChef.image}} alt="Chef">
+                        		</a>
+							</div>
+					 		<div class="media-body">
+								<h2 class="media-heading">
+									{{execChef.name}} <span class="label label-danger">{{execChef.designation}}</span>
+									<span class="badge">{{execChef.abbr}}</span>
+								</h2>
+								<p>{{execChef.description}}</p>
+							</div> 
+						</li>
+               </ul>
             </div>
         </div>
     </div>
