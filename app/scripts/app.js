@@ -33,6 +33,18 @@ angular.module('confusionApp', ['ui.router'])
                 }
             })
         
+            // Added to app.js a ui-route to aboutus#leadership part when cliking on the image:
+            // route for the aboutus#leadership page
+            .state('app.aboutus#leadership', {
+            	url: 'aboutus#leadership',
+            	views: {
+            		'content@': {
+            			templateUrl : 'views/aboutus.html#EC',
+            			controller : 'AboutController'
+            		}
+            	}
+            })
+
             // route for the contactus page
             .state('app.contactus', {
                 url:'contactus',
